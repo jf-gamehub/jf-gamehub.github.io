@@ -4,19 +4,41 @@
     <title>JF GameHub!</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="https://assets.onecompiler.app/42zycvts2/433egsanj/jfgamehublogo.png">
+    <script>
+      function filterGames() {
+        const query = document.getElementById("game-search").value.toLowerCase();
+        const gameLinks = document.querySelectorAll(".game-link");
+
+        gameLinks.forEach(link => {
+          const gameName = link.querySelector(".game-name-overlay").textContent.toLowerCase();
+          if (gameName.includes(query)) {
+            link.style.display = "flex";
+          } else {
+            link.style.display = "none";
+          }
+        });
+      }
+    </script>
   </head>
   <body>
     <img class="jfgamesimagestart" src="https://assets.onecompiler.app/42zycvts2/433egsanj/jfgamehublogo.png" width="100px" alt="JF GameHub Logo" />
     <h1 class="title">JF GameHub</h1>
-    <p class="games-below">Games Below</p>
 
-    <!-- Search Bar -->
+    <!-- Search bar -->
     <div class="search-container">
-      <input type="text" id="searchBar" class="search-bar" placeholder="Search for a game..." onkeyup="filterGames()">
+      <input
+        type="text"
+        id="game-search"
+        class="search-bar"
+        placeholder="Search games..."
+        onkeyup="filterGames()"
+      />
     </div>
 
+    <p class="games-below">Games Below</p>
+
     <!-- Game Links with Images -->
-    <div class="games-links" id="gamesLinks">
+    <div class="games-links">
       <a href="game.html?game=slope" class="game-link">
         <div class="game-img-container">
           <img src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/slope.webp" alt="Slope" class="game-img" />
@@ -53,21 +75,12 @@
           <div class="game-name-overlay">Run 3</div>
         </div>
       </a>
+      <a href="game.html?game=drivemad" class="game-link">
+        <div class="game-img-container">
+          <img src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/drive-mad.jpg" alt="Drive Mad" class="game-img" />
+          <div class="game-name-overlay">Drive Mad</div>
+        </div>
+      </a>
     </div>
-
-    <script>
-      function filterGames() {
-        const searchQuery = document.getElementById('searchBar').value.toLowerCase();
-        const gameLinks = document.querySelectorAll('.game-link');
-        gameLinks.forEach(gameLink => {
-          const gameName = gameLink.querySelector('.game-name-overlay').textContent.toLowerCase();
-          if (gameName.includes(searchQuery)) {
-            gameLink.style.display = "block"; // Show the game link
-          } else {
-            gameLink.style.display = "block"; // Don't remove any game, just hide irrelevant ones
-          }
-        });
-      }
-    </script>
   </body>
 </html>
