@@ -20,6 +20,24 @@
         height: 100vh;
         border: none;
       }
+
+      /* Link back to main page */
+      .back-link {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .back-link:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
     </style>
     <script>
       // Function to get query parameters from the URL
@@ -46,13 +64,12 @@
           iframeContainer.src = "https://sz-games.github.io/games/tunnel-rush/";
         } else if (gameName === "run3") {
           iframeContainer.src = "https://sz-games.github.io/Run3/tn6pS9dCf37xAhkJv";
-        } else if (gameName === "papaspizzeria") {
-          iframeContainer.src = "https://sz-games.github.io/FlashGames/papaspizzeria_v2.swf";
-        } else if (gameName === "minecraft") {
-          iframeContainer.src = "https://sz-games.github.io/storage3/AWeb";
+        } else if (gameName === "drivemad") {
+          iframeContainer.src = "https://sz-games.github.io/Games5/drive-mad";
         } else {
           // Fallback if the game is not found
-          iframeContainer.src = "";
+          iframeContainer.src = "about:blank";
+          alert("Game not loaded. Please go back to the main page.");
         }
 
         // Append the iframe to the body of the page
@@ -64,6 +81,7 @@
     </script>
   </head>
   <body>
+    <a href="index.html" class="back-link">Back to Main Page</a>
     <!-- The iframe will be dynamically loaded by JavaScript -->
   </body>
 </html>
