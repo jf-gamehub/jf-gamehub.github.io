@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game Viewer</title>
+    <style>
+      /* Remove margins and padding to ensure the iframe fills the whole screen */
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+
+      /* Make the iframe take up the full screen */
+      iframe {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+      }
+    </style>
+    <script>
+      // Function to get query parameters from the URL
+      function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      // Function to dynamically load the game
+      function loadGame() {
+        const gameName = getQueryParameter("game"); // Get the game name from the URL
+        const iframeContainer = document.createElement("iframe");
+
+        // Dynamically set the iframe source based on the game name
+        if (gameName === "slope") {
+          iframeContainer.src = "https://sz-games.github.io/slope/";
+        } else if (gameName === "1v1LOL") {
+          iframeContainer.src = "https://sz-games.github.io/Games-2/lol";
+        } else {
+          // Fallback if the game is not found
+          iframeContainer.src = "";
+        }
+
+        // Append the iframe to the body of the page
+        document.body.appendChild(iframeContainer);
+      }
+
+      // Load the game when the page finishes loading
+      window.onload = loadGame;
+    </script>
+  </head>
+  <body>
+    <!-- The iframe will be dynamically loaded by JavaScript -->
+  </body>
+</html>
