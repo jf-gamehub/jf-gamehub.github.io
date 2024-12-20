@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JF GameHub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="https://assets.onecompiler.app/42zycvts2/433egsanj/jfgamehublogo.png">
+    <script>
+      // Filter games based on search input
+      function filterGames() {
+        const query = document.getElementById("search-bar").value.toLowerCase();
+        const gameContainers = document.querySelectorAll(".game-img-container");
+
+        gameContainers.forEach(container => {
+          const gameName = container.dataset.name.toLowerCase();
+          if (gameName.includes(query)) {
+            container.style.display = "flex";
+          } else {
+            container.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <img class="jfgamesimagestart" src="https://assets.onecompiler.app/42zycvts2/433egsanj/jfgamehublogo.png" width="100px" alt="JF GameHub Logo" />
+    <h1 class="title">JF GameHub</h1>
+    <p class="games-below">Games Below</p>
+
+    <!-- Search bar -->
+    <div class="search-container">
+      <input id="search-bar" class="search-bar" type="text" placeholder="Search games..." oninput="filterGames()" />
+    </div>
+
+    <!-- Game links -->
+    <div class="games-links">
+      <!-- Game 1 -->
+      <div class="game-img-container" data-name="Slope">
+        <a href="game.html?game=slope">
+          <img class="game-img" src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/slope.webp" alt="Slope" />
+          <div class="game-name-overlay">Slope</div>
+        </a>
+      </div>
+
+      <!-- Game 2 -->
+      <div class="game-img-container" data-name="1v1 LOL">
+        <a href="game.html?game=1v1LOL">
+          <img class="game-img" src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/lol.webp" alt="1v1 LOL" />
+          <div class="game-name-overlay">1v1 LOL</div>
+        </a>
+      </div>
+
+      <!-- Game 3 -->
+      <div class="game-img-container" data-name="Stack">
+        <a href="game.html?game=stack">
+          <img class="game-img" src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/Stack.webp" alt="Stack" />
+          <div class="game-name-overlay">Stack</div>
+        </a>
+      </div>
+
+      <!-- Game 4 -->
+      <div class="game-img-container" data-name="Paper.io 2">
+        <a href="game.html?game=paperio2">
+          <img class="game-img" src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/paperio.webp" alt="Paper.io 2" />
+          <div class="game-name-overlay">Paper.io 2</div>
+        </a>
+      </div>
+
+      <!-- Game 5 -->
+      <div class="game-img-container" data-name="Tunnel Rush">
+        <a href="game.html?game=tunnelrush">
+          <img class="game-img" src="https://github.com/sz-games/sz-games.github.io/blob/main/cover/tunnel.webp?raw=true" alt="Tunnel Rush" />
+          <div class="game-name-overlay">Tunnel Rush</div>
+        </a>
+      </div>
+
+      <!-- Game 6 -->
+      <div class="game-img-container" data-name="Run 3">
+        <a href="game.html?game=run3">
+          <img class="game-img" src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/run3s.webp" alt="Run 3" />
+          <div class="game-name-overlay">Run 3</div>
+        </a>
+      </div>
+
+      <!-- Game 7 -->
+      <div class="game-img-container" data-name="Drive Mad">
+        <a href="game.html?game=drivemad">
+          <img class="game-img" src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/drive-mad.jpg" alt="Drive Mad" />
+          <div class="game-name-overlay">Drive Mad</div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

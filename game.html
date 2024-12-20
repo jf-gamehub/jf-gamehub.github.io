@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JF GameHub - Game</title>
+    <link rel="icon" type="image/x-icon" href="https://assets.onecompiler.app/42zycvts2/433egsanj/jfgamehublogo.png">
+    <style>
+      /* Reset styles for body and HTML */
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+
+      /* Style for the iframe to take up the full screen */
+      iframe {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+      }
+
+      /* Style for the back button */
+      .back-button {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .back-button:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    </style>
+    <script>
+      // Function to get query parameters from the URL
+      function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      // Function to dynamically load the game
+      function loadGame() {
+        const gameName = getQueryParameter("game"); // Get the game name from the URL
+        const iframeContainer = document.createElement("iframe");
+
+        // Dynamically set the iframe source based on the game name
+        if (gameName === "slope") {
+          iframeContainer.src = "https://sz-games.github.io/slope/";
+        } else if (gameName === "1v1LOL") {
+          iframeContainer.src = "https://sz-games.github.io/Games-2/lol";
+        } else if (gameName === "stack") {
+          iframeContainer.src = "https://sz-games.github.io/games/stack";
+        } else if (gameName === "paperio2") {
+          iframeContainer.src = "https://sz-games.github.io/Games/paperio2/index.html";
+        } else if (gameName === "tunnelrush") {
+          iframeContainer.src = "https://sz-games.github.io/games/tunnel-rush/";
+        } else if (gameName === "run3") {
+          iframeContainer.src = "https://sz-games.github.io/Run3/tn6pS9dCf37xAhkJv";
+        } else if (gameName === "drivemad") {
+          iframeContainer.src = "https://sz-games.github.io/Games5/drive-mad";
+        } else {
+          // Fallback if the game is not found
+          iframeContainer.src = "";
+        }
+
+        // Append the iframe to the body of the page
+        document.body.appendChild(iframeContainer);
+      }
+
+      // Load the game when the page finishes loading
+      window.onload = loadGame;
+    </script>
+  </head>
+  <body>
+    <a href="index.html" class="back-button"><</a>
+    <!-- The iframe will be dynamically loaded by JavaScript -->
+  </body>
+</html>
