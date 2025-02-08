@@ -76,3 +76,20 @@ body {
   outline: none;
   border-color: #888;
 }
+
+.requestgamebutton button {
+  background-color: black;
+  border-radius: 15px;
+  padding: 15px;
+  border: none;
+  display: flex;
+  margin: auto;
+}
+
+.requestgamebutton button a{
+text-decoration: none;
+  color: white;
+  font-family: Sans-Serif;
+  font-weight: bold;
+  font-size: 20px;
+}
