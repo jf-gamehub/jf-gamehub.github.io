@@ -93,3 +93,9 @@ text-decoration: none;
   font-weight: bold;
   font-size: 20px;
 }
+
+h3{
+  color: white;
+  font-family: Sans-Serif;
+  text-align: center;
+}
