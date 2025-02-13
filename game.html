@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>JF GameHub - Game</title>
-    <link rel="icon" type="image/x-icon" href="https://assets.onecompiler.app/42zycvts2/433egsanj/jfgamehublogo.png">
+    <link rel="icon" type="image/x-icon" href="https://assets.onecompiler.app/42zycvts2/438f5kq93/jfgamehublogo.png">
     <style>
       /* Remove margins and padding to ensure the iframe fills the whole screen */
       body, html {
@@ -53,34 +53,25 @@
         const iframeContainer = document.createElement("iframe");
 
         // Dynamically set the iframe source based on the game name
-        if (gameName === "slope") {
-          iframeContainer.src = "https://sz-games.github.io/slope/";
-        } else if (gameName === "1v1LOL") {
-          iframeContainer.src = "https://sz-games.github.io/Games-2/lol";
-        } else if (gameName === "stack") {
-          iframeContainer.src = "https://sz-games.github.io/games/stack";
-        } else if (gameName === "paperio2") {
-          iframeContainer.src = "https://sz-games.github.io/Games/paperio2/index.html";
-        } else if (gameName === "tunnelrush") {
-          iframeContainer.src = "https://sz-games.github.io/games/tunnel-rush/";
-        } else if (gameName === "run3") {
-          iframeContainer.src = "https://sz-games.github.io/Run3/tn6pS9dCf37xAhkJv";
-        } else if (gameName === "drivemad") {
-          iframeContainer.src = "https://sz-games.github.io/Games5/drive-mad";
-        } else if (gameName === "minecraft") {
-          iframeContainer.src = "https://eaglercraft.com/mc/1.8.8/"; // Minecraft iframe URL
-        } else if (gameName === "bloxdio") {
-          iframeContainer.src = "https://bloxd.io"; // Bloxd.io iframe URL
-        } else if (gameName === "deadlydecent") {
-          iframeContainer.src = "https://sz-games.github.io/Games10/deadlydecent/";
-        } else if (gameName === "neondrift") {
-          iframeContainer.src = "https://freegames.org/neon-drift/"; // Neon Drift iframe URL
-        } else if (gameName === "bitlife") {
-          iframeContainer.src = "https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/Bitlife.png"; // BitLife iframe URL
-        } else {
-          // Fallback if the game is not found
-          iframeContainer.src = "";
-        }
+        const gameURLs = {
+          "slope": "https://sz-games.github.io/slope/",
+          "1v1LOL": "https://sz-games.github.io/Games-2/lol",
+          "stack": "https://sz-games.github.io/games/stack",
+          "paperio2": "https://sz-games.github.io/Games/paperio2/index.html",
+          "tunnelrush": "https://sz-games.github.io/games/tunnel-rush/",
+          "run3": "https://sz-games.github.io/Run3/tn6pS9dCf37xAhkJv",
+          "drivemad": "https://sz-games.github.io/Games5/drive-mad",
+          "minecraft": "https://eaglercraft.com/mc/1.8.8/",
+          "bloxdio": "https://bloxd.io/",
+          "deadlydecent": "https://sz-games.github.io/Games3/DeadlyDecent/",
+          "neondrift": "https://sz-games.github.io/Games6/neon-drift/",
+          "snowrider3d": "https://sz-games.github.io/Games7/snow-rider3d/",
+          "bitlife": "https://sz-games.github.io/Games9/bitlife/",
+          "buckshotroulette": "https://buckshotroulette.online/steam/"
+        };
+
+        // Check if the game exists in the object
+        iframeContainer.src = gameURLs[gameName] || ""; // Empty if game not found
 
         // Append the iframe to the body of the page
         document.body.appendChild(iframeContainer);
