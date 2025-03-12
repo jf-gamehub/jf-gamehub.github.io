@@ -1,5 +1,6 @@
 body {
-  background-color: #414141;
+  background-color: #303030;
+  margin: 0px;
 }
 
 .jfgamesimagestart {
@@ -15,13 +16,13 @@ body {
   font-size: 45px;
 }
 
-.games-below {
+.games {
+  margin-top: 20px;
   text-align: center;
   color: #a8a8a5;
   font-family: Sans-Serif;
-  background-color: #333333; /* Darker shade of the background */
+  background-color: #212121; /* Darker shade of the background */
   padding: 10px;
-  border-radius: 10px;
 }
 
 .games-links {
@@ -79,7 +80,7 @@ body {
 }
 
 .requestgamebutton button {
-  background-color: black;
+  background-color: #171717;
   border-radius: 15px;
   padding: 15px;
   border: none;
@@ -99,4 +100,20 @@ h3{
   color: white;
   font-family: Sans-Serif;
   text-align: center;
+}
+
+.annoucements{
+  width: 400px;
+  height: 100px;
+  background-color: black;
+  background-color: #292929;
+  border-color: 2px solid #1c1c1c;
+  border-style: dashed;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.annoucements h3{
+  
 }
