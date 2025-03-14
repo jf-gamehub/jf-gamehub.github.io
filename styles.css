@@ -147,3 +147,17 @@ h3{
 ::-webkit-scrollbar-thumb:hover {
   background: #424242; 
 }
+
+.pdrift button{
+  background-color: #171717;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  margin-top: 25px;
+}
+
+.pdrift button a {
+  color: white;
+  font-family: Sans-Serif;
+  font-size: 20px;
+}
