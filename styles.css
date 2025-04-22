@@ -134,12 +134,12 @@ h3{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #171717; 
+  background: #ffffff; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #595959; 
+  background: #000000; 
   border-radius: 2px;
 }
 
@@ -160,4 +160,12 @@ h3{
   color: white;
   font-family: Sans-Serif;
   font-size: 20px;
+}
+
+.credit {
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-family: Sans-Serif;
+  padding: 5px;
 }
