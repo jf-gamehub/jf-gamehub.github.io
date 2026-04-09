@@ -253,8 +253,66 @@ h3{
 }
 
 
-.opbuttons {
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #212121; /* same as .games */
   display: flex;
-  gap: 5px;
-  justify-content:  center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* LEFT SIDE */
+.nav-left {
+  flex: 1;
+}
+
+/* NAV SEARCH */
+.navsearch {
+  width: 250px;
+  padding: 10px;
+  background-color: #303030;
+  border: 2px solid #2b2b2b;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.navsearch:focus {
+  outline: none;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+/* NAV LINKS */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: Sans-Serif;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+/* UNDERLINE HOVER EFFECT */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
